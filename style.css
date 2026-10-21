@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "ANDYB";
+  src: url("asset/font/ANDYB.ttf") format("truetype");
+}
+
+* {
+  font-family: "ANDYB";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+
+  background-image: url("asset/image/terraria.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+p {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #b7968d;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #b7968d;
+}
+
+input[type="text"] {
+  width: 20vw;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #88665d;
+  border: 0;
+  border-radius: 5px;
+}
+
+input[type="password"] {
+  width: 20vw;
+  padding: 5px;
+  font-size: 20px;
+  background-color: #88665d;
+  border: 0;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 10vw;
+  padding: 5px;
+  font-size: 18px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #88665d;
+  color: #b7968d;
+}
+
+input[type="submit"]:hover {
+  background-color: #5c433a;
+}
+
+.container {
+  border: 1px solid #66473f;
+  background-color: #66473f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.outer-container {
+  border: 2px solid #5a433a;
+  /* background-color: #5a433a; */
+  background-image: url("asset/image/dirt.webp");
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  padding: 18px;
+  border-radius: 10px;
+}
+
+/* Full-screen transition overlay */
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Cover the login page with black */
+.transition-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Transparent logo in the center */
+.transition-logo {
+  width: 560px;
+  max-width: 80vw;
+  height: auto;
+
+  opacity: 0;
+  transform: scale(0.95);
+
+  transition:
+    opacity 1s ease-in-out,
+    transform 1s ease-in-out;
+}
+
+/* Fade in the logo */
+.transition-logo.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* #fade-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+} */
