@@ -126,8 +126,3 @@ input[type="submit"]:hover {
   opacity: 1;
   transform: scale(1);
 }
-
-/* #fade-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-} */
